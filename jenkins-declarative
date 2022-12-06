@@ -1,5 +1,8 @@
 pipeline{
     agent any
+    environment{
+    PATH= "/usr/share/maven/bin:$PATH"
+    }
     stages{
         stage("Git colone"){
             steps{
@@ -8,7 +11,7 @@ pipeline{
         }
         stage("maven build"){
             steps{
-                build 'mvn install'
+                sh "mvn clean package"
             }
         }    
    }    
