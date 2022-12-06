@@ -1,0 +1,15 @@
+pipeline{
+    agent any
+    stages{
+        stage("Git colone"){
+            steps{
+                git credentialsId: 'github', url: 'https://github.com/avinash6043/demo-proj-1.git'
+            }
+        } 
+        stage("Git colone"){
+            steps{
+                git credentialsId: 'github', url: 'https://github.com/avinash6043/demo-proj-1.git'
+            }
+        } 
+   }
+}
